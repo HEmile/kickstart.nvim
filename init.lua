@@ -161,6 +161,15 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Map 'jk' to exit insert mode in Neovim
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
+
+-- Move cursor to the beginning of the current line with 'H'
+vim.api.nvim_set_keymap('n', 'H', '^', { noremap = true, silent = true })
+
+-- Move cursor to the end of the current line with 'L'
+vim.api.nvim_set_keymap('n', 'L', 'g_', { noremap = true, silent = true })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
