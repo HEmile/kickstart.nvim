@@ -228,6 +228,7 @@ require('lazy').setup({
       table.insert(ensure_installed, 'mypy')
       table.insert(ensure_installed, 'ruff')
       table.insert(ensure_installed, 'black')
+      table.insert(ensure_installed, 'debugpy')
 
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
