@@ -70,7 +70,7 @@ opt.cursorline = true
 opt.scrolloff = 10
 
 -- Wrap lines
-opt.wrap = false
+opt.wrap = true
 
 -- Tabs and stuff
 opt.tabstop = 2 -- number of spaces for tabs
