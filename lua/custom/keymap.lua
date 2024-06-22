@@ -59,3 +59,6 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+keymap.set('n', '<Leader>ce', '<cmd>Copilot enable<Cr>', { desc = '[E]nable Copilot' })
+keymap.set('n', '<Leader>cd', '<cmd>Copilot disable<Cr>', { desc = '[D]isable Copilot' })
