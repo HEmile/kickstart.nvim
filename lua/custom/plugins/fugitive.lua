@@ -10,5 +10,7 @@ return {
     keymap.set('n', '<Leader>ga', '<Cmd>Git add .<CR>', { desc = '[G]it [A]dd all' })
     keymap.set('n', '<Leader>gp', '<Cmd>Git push<CR>', { desc = '[G]it [P]ush' })
     keymap.set('n', '<Leader>gi', '<Cmd>e .gitignore<CR>', { desc = 'Open [G]it [I]gnore' })
+    keymap.set('n', '<Leader>gf', '<Cmd>Git fetch<CR>', { desc = '[G]it [F]etch' })
+    keymap.set('n', '<Leader>gg', '<Cmd>Git pull<CR>', { desc = '[G]it [P]ull' })
   end,
 }
