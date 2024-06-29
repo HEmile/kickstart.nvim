@@ -62,3 +62,34 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 keymap.set('n', '<Leader>ce', '<cmd>Copilot enable<Cr>', { desc = '[E]nable Copilot' })
 keymap.set('n', '<Leader>cd', '<cmd>Copilot disable<Cr>', { desc = '[D]isable Copilot' })
+
+keymap.set('n', '<Leader>no', '<cmd>ObsidianOpen<Cr>', { desc = 'Open in [O]bsidian' })
+keymap.set('n', '<Leader>nf', '<cmd>ObsidianFollowLink<Cr>', { desc = '[F]ollow link' })
+keymap.set('n', '<Leader>ni', '<cmd>ObsidianPasteImg<Cr>', { desc = 'Paste [I]mage (requires brew install pngpaste)' })
+keymap.set('n', '<Leader>nb', '<cmd>ObsidianBacklinks<Cr>', { desc = '[B]acklinks' })
+keymap.set('n', '<Leader>nt', '<cmd>ObsidianTemplate<Cr>', { desc = 'Insert [T]emplate' })
+
+-- Function to create a new file in the directory of the current buffer
+local function create_new_file_in_buffer_directory()
+  -- Get the directory of the current buffer
+  local current_buffer_path = vim.api.nvim_buf_get_name(0)
+  local current_directory = vim.fn.fnamemodify(current_buffer_path, ':h')
+
+  -- Prompt the user for the new file name
+  local new_file_name = vim.fn.input('New file name: ', '', 'file')
+
+  -- Create the full path of the new file
+  local new_file_path = current_directory .. '/' .. new_file_name
+
+  -- Create the new file and open it in a new buffer
+  vim.api.nvim_command('edit ' .. new_file_path)
+end
+
+-- Map the function to a key combination
+keymap.set(
+  'n',
+  '<leader>fn',
+  create_new_file_in_buffer_directory,
+  { noremap = true, silent = true, desc = 'Create a new file in the directory of the current buffer' }
+)
+keymap.set('n', '<Leader>fu', '<cmd>UndotreeToggle<CR>', { desc = 'Toggle undotree' })

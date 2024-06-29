@@ -83,3 +83,6 @@ opt.cursorline = true -- highlight line for cursor??
 opt.backspace = 'indent,eol,start'
 
 opt.foldmethod = 'manual'
+opt.foldcolumn = '1'
+
+opt.conceallevel = 2
