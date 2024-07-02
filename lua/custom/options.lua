@@ -86,3 +86,19 @@ opt.foldmethod = 'manual'
 opt.foldcolumn = '1'
 
 opt.conceallevel = 2
+
+vim.o.updatetime = 250
+vim.api.nvim_create_autocmd('CursorHold', {
+  buffer = 0,
+  callback = function()
+    local opts = {
+      focusable = false,
+      close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
+      border = 'rounded',
+      source = 'always',
+      prefix = ' ',
+      scope = 'cursor',
+    }
+    vim.diagnostic.open_float(nil, opts)
+  end,
+})

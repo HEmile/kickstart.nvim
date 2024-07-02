@@ -46,6 +46,9 @@ return {
     keymap.set('n', '<Leader>p', function()
       harpoon:list():select(4)
     end, { desc = 'Select [4] harpoon' })
+    keymap.set('n', '<Leader>Y', function()
+      require('harpoon.cmd-ui').toggle_quick_menu()
+    end, { desc = 'Open Harpoon menu' })
 
     -- Toggle previous & next buffers stored within Harpoon list
     keymap.set('n', '<C-S-P>', function()

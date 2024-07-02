@@ -1,0 +1,5 @@
+wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+rm nvim-linux64.tar.gz
+mkdir -p ~/.config/nvim/
+git clone https://github.com/HEmile/kickstart.nvim.git
