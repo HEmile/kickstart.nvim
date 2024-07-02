@@ -7,6 +7,7 @@ echo 'export PATH="$HOME/nvim-linux64/bin:$PATH"' >> ~/.bashrc && source ~/.bash
 
 
 
+
 # Probably unnecessary, in case of glibc version mismatch
 # mkdir $HOME/glibc/ && cd $HOME/glibc
 # wget http://ftp.gnu.org/gnu/libc/glibc-2.32.tar.gz
